@@ -1,0 +1,39 @@
+class Grandfather {
+    void gen1() {
+        System.out.println("Money");
+    }
+}
+
+class Father extends Grandfather {
+    void gen21() {
+        System.out.println("Gold");
+    }
+}
+
+class Mother extends Father {
+    void gen22() {
+        System.out.println("Silver");
+    }
+}
+
+class Son extends Father {
+    void gen3() {
+        System.out.println("Diamond");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Son s = new Son();
+
+        s.gen3();
+        s.gen21();
+        s.gen1();
+
+        Mother m = new Mother();
+
+        m.gen22();
+        m.gen21();
+        m.gen1();
+    }
+}
